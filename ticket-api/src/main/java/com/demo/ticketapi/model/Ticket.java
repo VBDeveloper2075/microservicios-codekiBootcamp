@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Ticket {
     private Long id;
+    private VueloDto vuelo;
     private String nombre;
     private double numeroVuelo;
 

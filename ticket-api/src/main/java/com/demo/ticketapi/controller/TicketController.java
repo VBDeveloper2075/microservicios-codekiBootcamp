@@ -5,16 +5,16 @@ import com.demo.ticketapi.service.TicketService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/tickets")
 public class TicketController {
+
     @Autowired
     TicketService ticketService;
 
@@ -35,9 +35,7 @@ public class TicketController {
 
     @PostMapping("/add")
     public Ticket addTicket(@RequestBody Ticket ticket){
-        System.out.println(ticket.toString());
-        ticketService.addTicket(ticket);
-        return ticket;
+        return ticketService.addTicket(ticket);
     }
 
     @DeleteMapping("/delete/{ticket_id}")
