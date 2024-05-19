@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Service
 public class TicketService {
-    private final List<Ticket> tickets = new ArrayList<>();
+    private List<Ticket> tickets;
 
     public TicketService() {
         tickets = new ArrayList<>();

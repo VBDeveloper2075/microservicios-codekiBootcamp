@@ -1,7 +1,9 @@
 package com.demo.ticketapi.controller;
 
 import com.demo.ticketapi.model.Ticket;
+import com.demo.ticketapi.model.VueloDto;
 import com.demo.ticketapi.service.TicketService;
+import com.demo.ticketapi.service.VueloClient;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class TicketController {
 
     @Autowired
     TicketService ticketService;
+
+    @Autowired
+    private VueloClient vueloClient;
 
     @Setter
     @Getter
@@ -46,5 +51,11 @@ public class TicketController {
     @GetMapping("/find/{ticket_id}")
     public Ticket findTicket(@PathVariable Long id){
         return ticketService.findTicketById(id).orElse(null);
+    }
+
+
+    @GetMapping("/api/vuelos")
+    public List<VueloDto> getAllVuelos() {
+        return vueloClient.getAllVuelos();
     }
 }

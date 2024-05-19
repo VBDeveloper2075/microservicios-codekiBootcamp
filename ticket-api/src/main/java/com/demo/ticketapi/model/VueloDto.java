@@ -15,6 +15,4 @@ public class VueloDto {
     private LocalDateTime fecha_hora_llegada;
     private double precio_en_pesos;
     private String frecuencia;
-    }
-
 }

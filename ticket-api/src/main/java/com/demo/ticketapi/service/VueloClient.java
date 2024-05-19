@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 
-@FeignClient(name = "vuelos-api")
+@FeignClient(name = "vuelos-server")
 public interface VueloClient {
-    @GetMapping("/api/vuelos")
-    List<VueloDto> getAllVuelos();
+    @GetMapping("/vuelos")
+    public List<VueloDto> getAllVuelos();
 
 }
