@@ -27,6 +27,10 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 		</dependency>
@@ -47,6 +51,7 @@
 			<version>2.2.0</version>
 		</dependency>
 	</dependencies>
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -56,7 +61,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 
